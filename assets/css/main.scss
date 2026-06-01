@@ -232,7 +232,7 @@ a:active { color: #000; }
 
 /* === HERO BAND === */
 .top-catalogo {
-  background: url('{{ "{{ site.baseurl }}/assets/images/hero.jpg" | relative_url }}') no-repeat center center;
+  background: url('{{ "/gob/assets/images/hero.jpg" | relative_url }}') no-repeat center center;
   background-size: cover;
   min-height: 200px;
   display: flex;
