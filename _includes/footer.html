@@ -1,0 +1,26 @@
+<div id="footer">
+  <div class="container">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h6>Contatti</h6>
+        {{ site.biblioteca.nome }}<br>
+        {{ site.biblioteca.indirizzo }}<br>
+        tel. {{ site.biblioteca.telefono }}<br>
+        mail: <a href="mailto:{{ site.biblioteca.email }}">{{ site.biblioteca.email }}</a>
+      </div>
+      <div class="footer-col">
+        <h6>Orari</h6>
+        <table class="tbl-openings">
+          <tbody>
+            {% for o in site.orari %}
+            <tr><td>{{ o.giorno }}:</td><td>{{ o.orario }}</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      powered by <a href="https://www.bibliowin.it" target="_blank">Bibliowin</a>
+    </div>
+  </div>
+</div>

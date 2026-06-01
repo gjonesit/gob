@@ -1,18 +1,39 @@
 ---
 layout: default
+title: Ricerca Semplice
+nav_section: ricerche
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+<h1 class="page-header">Ricerca Semplice</h1>
+<p class="search-desc">Ricerca nel catalogo</p>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+<form action="#" method="get">
+  <input type="hidden" name="search-type" value="SSMP">
+  <div class="search-fields">
+    <div class="search-inputs">
+      <input id="txt-Any-1" autofocus type="text" name="q"
+        class="form-control"
+        placeholder="Inserire il testo da cercare"
+        aria-label="Ricerca Semplice">
+      <select name="codbib" class="form-control">
+        <option value="">Tutte le biblioteche</option>
+        <option value="SFF1">Biblioteca della Filologica, sede di Udine (SFF1)</option>
+        <option value="SFF2">Biblioteca della Filologica, sede di Gorizia (SFF2)</option>
+      </select>
+    </div>
+    <button class="btn btn-primary btn-sm" type="submit" title="Cerca">
+      <i class="fa fa-search"></i> cerca
+    </button>
+  </div>
+</form>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+<div class="help-box">
+  <p>La <strong>"Ricerca semplice"</strong> ricerca su tutti gli elementi che compongono la notizia bibliografica.</p>
+  <p class="htitle">Esempi</p>
+  <ul>
+    <li>Più parole: <em>arte Italia</em> — trova tutte le notizie che contengono contemporaneamente entrambi i termini (operatore AND)</li>
+    <li>Frase esatta tra virgolette: <em>"Novecento in Italia"</em></li>
+    <li><em>Ital*</em> trova Italia, italiani, …</li>
+    <li>Almeno una parola: <em>Italia OR Austria</em></li>
+  </ul>
 </div>

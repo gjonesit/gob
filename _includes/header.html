@@ -1,0 +1,90 @@
+<div id="header">
+  <div class="container">
+    <div class="header-top">
+      <div class="logo">
+        <a href="{{ site.biblioteca.sito_web }}" target="_blank" rel="noopener">
+          <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Società Filologica Friulana">
+        </a>
+      </div>
+      <div class="header-right">
+        <div class="header-search">
+          <form action="/ricerca" method="get" role="search">
+            <input type="text" name="q" placeholder="Ricerca nel catalogo" aria-label="Ricerca">
+            <button type="submit" aria-label="Cerca"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+        <div class="lang-switch">
+          <a href="#" class="active" title="Italiano">Italiano</a>
+          <a href="#" title="Friulano">Friulano</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="global-menu">
+    <div class="container">
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+      <ul class="navbar" id="navbar" role="menubar">
+
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link{% if page.nav_section == 'ricerche' %} active{% endif %}" role="menuitem">
+            Ricerche <span class="caret"></span>
+          </a>
+          <div class="dropdown-menu" role="menu">
+            {% for item in site.nav_ricerche %}
+            <a role="menuitem" href="{{ item.url }}"
+               {% if page.url == item.url %}class="active"{% endif %}>{{ item.label }}</a>
+            {% endfor %}
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link" role="menuitem">
+            Indici <span class="caret"></span>
+          </a>
+          <div class="dropdown-menu" role="menu">
+            {% for item in site.nav_indici %}
+            <a role="menuitem" href="{{ item.url }}">{{ item.label }}</a>
+            {% endfor %}
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link" role="menuitem">
+            Ricerche Speciali <span class="caret"></span>
+          </a>
+          <div class="dropdown-menu" role="menu">
+            {% for item in site.nav_speciali %}
+            <a role="menuitem" href="{{ item.url }}">{{ item.label }}</a>
+            {% endfor %}
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="/pages/biblioteche.html" class="nav-link">Biblioteche</a>
+        </li>
+
+        <li class="nav-item nav-item-user dropdown">
+          <button class="btn-user" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-user"></i> <span class="caret"></span>
+          </button>
+          <div class="dropdown-menu" role="menu" style="right:0;left:auto">
+            <a href="#" role="menuitem">Login</a>
+            <a href="#" role="menuitem">I miei libri</a>
+            <a href="#" role="menuitem">Le mie ricerche</a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+  <div class="top-catalogo">
+    <div class="container">
+      <div class="top-catalogo-inner">
+        <h4>Biblioteca</h4>
+        <p class="sub">Catalogo di consultazione (OPAC)</p>
+      </div>
+    </div>
+  </div>
+</div>
