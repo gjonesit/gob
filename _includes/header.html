@@ -1,21 +1,16 @@
 <div id="header">
   <div class="container">
     <div class="header-top">
-      <div class="logo">
-        <a href="{{ site.biblioteca.sito_web }}" target="_blank" rel="noopener">
-          <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Società Filologica Friulana">
-        </a>
-      </div>
-      <div class="header-right">
-        <div class="header-search">
-          <form action="/ricerca" method="get" role="search">
-            <input type="text" name="q" placeholder="Ricerca nelle risorse" aria-label="Ricerca">
-            <button type="submit" aria-label="Cerca"><i class="fa fa-search"></i></button>
-          </form>
+      <a href="{{ '/' | relative_url }}" class="logo">
+        <div class="logo-mark">FI</div>
+        <div class="logo-text">
+          <span class="l1">{{ site.title }}</span>
+          <span class="l2">{{ site.autore.ruolo }}</span>
         </div>
+      </a>
+      <div class="header-right">
         <div class="lang-switch">
-          <a href="/" class="active" title="pubblic">Pubblico</a>
-          <a href="/area-personale/" title="Friulano">Internal</a>
+          <span style="font-size:15px;color:#aaa;padding-right:10px">{% if page.title %}{{ page.title }}{% endif %}</span>
         </div>
       </div>
     </div>
@@ -27,51 +22,42 @@
       <ul class="navbar" id="navbar" role="menubar">
 
         <li class="nav-item dropdown">
-          <a href="#" class="nav-link{% if page.nav_section == 'ricerche' %} active{% endif %}" role="menuitem">
-            Ricerche <span class="caret"></span>
+          <a class="nav-link{% if page.nav_section == 'fi23' %} active{% endif %}" href="#" role="menuitem">
+            FI23 <span class="caret"></span>
           </a>
           <div class="dropdown-menu" role="menu">
-            {% for item in site.nav_ricerche %}
-            <a role="menuitem" href="{{ item.url }}"
-               {% if page.url == item.url %}class="active"{% endif %}>{{ item.label }}</a>
+            {% for item in site.nav_fi23 %}
+            <a href="{{ item.url }}"{% if page.url == item.url %} class="active"{% endif %}>{{ item.label }}</a>
             {% endfor %}
           </div>
         </li>
 
         <li class="nav-item dropdown">
-          <a href="#" class="nav-link" role="menuitem">
-            Indici <span class="caret"></span>
+          <a class="nav-link{% if page.nav_section == 'grafica' %} active{% endif %}" href="#" role="menuitem">
+            Grafica <span class="caret"></span>
           </a>
           <div class="dropdown-menu" role="menu">
-            {% for item in site.nav_indici %}
-            <a role="menuitem" href="{{ item.url }}">{{ item.label }}</a>
-            {% endfor %}
-          </div>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a href="#" class="nav-link" role="menuitem">
-            Ricerche Speciali <span class="caret"></span>
-          </a>
-          <div class="dropdown-menu" role="menu">
-            {% for item in site.nav_speciali %}
-            <a role="menuitem" href="{{ item.url }}">{{ item.label }}</a>
+            {% for item in site.nav_grafica %}
+            <a href="{{ item.url }}"{% if page.url == item.url %} class="active"{% endif %}>{{ item.label }}</a>
             {% endfor %}
           </div>
         </li>
 
         <li class="nav-item">
-          <a href="/pages/biblioteche.html" class="nav-link">Biblioteche</a>
+          <a class="nav-link{% if page.nav_section == 'progetti' %} active{% endif %}"
+             href="/pages/progetti.html">Progetti</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/contatti.html">Contatti</a>
         </li>
 
         <li class="nav-item nav-item-user dropdown">
-          <button class="btn-user" aria-haspopup="true" aria-expanded="false">
+          <button class="btn-user" aria-haspopup="true">
             <i class="fa fa-user"></i> <span class="caret"></span>
           </button>
-          <div class="dropdown-menu" role="menu" style="right:0;left:auto">
-            <a href="#" role="menuitem">Login</a>
-            <a href="#" role="menuitem">I miei libri</a>
-            <a href="#" role="menuitem">Le mie ricerche</a>
+          <div class="dropdown-menu" style="right:0;left:auto" role="menu">
+            <a href="mailto:{{ site.autore.email }}">Scrivimi</a>
           </div>
         </li>
 
@@ -79,11 +65,11 @@
     </div>
   </div>
 
-  <div class="top-catalogo">
+  <div class="top-hero">
     <div class="container">
-      <div class="top-catalogo-inner">
-        <h4>Biblioteca</h4>
-        <p class="sub">Catalogo di consultazione (OPAC)</p>
+      <div class="top-hero-inner">
+        <h4>{{ page.hero_title | default: site.title }}</h4>
+        <p class="sub">{{ page.hero_sub | default: site.description }}</p>
       </div>
     </div>
   </div>

@@ -1,44 +1,24 @@
-title: "Ufficio di Gabriel Jones"
-description: "Sito dell'ufficio di Gabriel Jones"
-baseurl: "/gob/"
-url: "https://gabrieljones.it"
+title: "Ufficio Digitale"
+description: "FI23 · Grafica · Progetti"
+baseurl: ""
+url: ""
 lang: it
 
-biblioteca:
-  nome: "Ufficio di Gabriel Jones"
-  indirizzo: "33170 Pordenone"
-  telefono: "0434-733808"
-  email: "info@18f.it"
-  sito_web: "http://www.gabrieljones.altervista.org"
+autore:
+  nome: "Il tuo nome"
+  ruolo: "Animatore · Grafico · Progettista"
+  email: "tua@email.it"
 
-orari:
-  - { giorno: "lunedì",    orario: "Dalle 14.30 alle 18.00" }
-  - { giorno: "martedì",   orario: "Dalle 14.30 alle 18.00" }
-  - { giorno: "mercoledì", orario: "Dalle 14.30 alle 18.00" }
-  - { giorno: "giovedì",   orario: "Dalle 14.30 alle 18.00" }
-  - { giorno: "venerdì",   orario: "Dalle 14.30 alle 18.00" }
-  - { giorno: "sabato",    orario: "chiuso" }
-  - { giorno: "Domenica",    orario: "chiuso" }
+nav_fi23:
+  - { label: "Oratorio & Grest", url: "/pages/grest.html" }
+  - { label: "Mangia Libri",     url: "/pages/mangia-libri.html" }
 
-nav_ricerche:
-  - { label: "Semplice",  url: "/" }
-  - { label: "Avanzata",  url: "/pages/avanzata.html" }
+nav_grafica:
+  - { label: "Portfolio",  url: "/pages/portfolio.html" }
+  - { label: "Contatti",   url: "/pages/contatti.html" }
 
-nav_indici:
-  - { label: "Titoli",          url: "#" }
-  - { label: "Autori",          url: "#" }
-  - { label: "Soggetti",        url: "#" }
-  - { label: "Collezioni",      url: "#" }
-  - { label: "Classificazioni", url: "#" }
-  - { label: "Editori",         url: "#" }
-
-nav_speciali:
-  - { label: "Libro moderno",        url: "#" }
-  - { label: "Libro antico",         url: "#" }
-  - { label: "Materiale musicale",   url: "#" }
-  - { label: "Materiale cartografico", url: "#" }
-  - { label: "Materiale grafico",    url: "#" }
-  - { label: "Materiale filmico",    url: "#" }
+nav_progetti:
+  - { label: "Progetti pubblici", url: "/pages/progetti.html" }
 
 plugins:
   - jekyll-feed

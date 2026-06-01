@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'it' }}">
-<head>
-  {% include head.html %}
-</head>
+<head>{% include head.html %}</head>
 <body>
 
 {% include header.html %}
 
-<div class="outer-main-container">
-  <div class="container main-container">
-    <div class="main-container-inner">
+<div class="outer-main">
+  <div class="container">
+    <div class="main-inner">
       {{ content }}
     </div>
   </div>
@@ -17,7 +15,7 @@
 
 {% include footer.html %}
 
-<a class="btn-back-to-top" href="#" id="btt" aria-label="Torna su">
+<a class="btt" href="#" id="btt" aria-label="Torna su">
   <i class="fa fa-arrow-up" aria-hidden="true"></i>
 </a>
 
@@ -33,7 +31,7 @@ document.querySelectorAll('.dropdown .nav-link, .nav-item-user .btn-user').forEa
   el.addEventListener('click', function(e) {
     if (window.innerWidth < 768) {
       e.preventDefault();
-      this.closest('.dropdown, .nav-item-user').classList.toggle('mob-open');
+      this.closest('.nav-item').classList.toggle('mopen');
     }
   });
 });
