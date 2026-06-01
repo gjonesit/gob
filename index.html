@@ -1,39 +1,56 @@
 ---
 layout: default
-title: Ricerca Semplice
-nav_section: ricerche
+title: Home
+hero_title: "Ufficio Digitale"
+hero_sub: "FI23 · Grafica freelance · Progetti"
 ---
 
-<h1 class="page-header">Ricerca Semplice</h1>
-<p class="search-desc">Ricerca nel catalogo</p>
+<h1 class="page-header">Ciao, sono {{ site.autore.nome }}</h1>
+<p class="section-intro">
+  Animatore di oratorio e grest, lettore ai bambini con i Mangia Libri,
+  grafico freelance e progettista. Questo è il mio spazio digitale.
+</p>
 
-<form action="#" method="get">
-  <input type="hidden" name="search-type" value="SSMP">
-  <div class="search-fields">
-    <div class="search-inputs">
-      <input id="txt-Any-1" autofocus type="text" name="q"
-        class="form-control"
-        placeholder="Inserire il testo da cercare"
-        aria-label="Ricerca Semplice">
-      <select name="codbib" class="form-control">
-        <option value="">Tutte le biblioteche</option>
-        <option value="SFF1">Biblioteca della Filologica, sede di Udine (SFF1)</option>
-        <option value="SFF2">Biblioteca della Filologica, sede di Gorizia (SFF2)</option>
-      </select>
-    </div>
-    <button class="btn btn-primary btn-sm" type="submit" title="Cerca">
-      <i class="fa fa-search"></i> cerca
-    </button>
+<div class="card-grid">
+
+  <div class="card">
+    <span class="tag">FI23</span>
+    <h3>Oratorio &amp; Grest</h3>
+    <p>
+      Animazione, laboratori e attività estive per bambini e ragazzi.
+      Il grest è il cuore dell'estate dell'oratorio.
+    </p>
+    <a href="/pages/grest.html" class="btn btn-primary btn-sm">Scopri</a>
   </div>
-</form>
 
-<div class="help-box">
-  <p>La <strong>"Ricerca semplice"</strong> ricerca su tutti gli elementi che compongono la notizia bibliografica.</p>
-  <p class="htitle">Esempi</p>
-  <ul>
-    <li>Più parole: <em>arte Italia</em> — trova tutte le notizie che contengono contemporaneamente entrambi i termini (operatore AND)</li>
-    <li>Frase esatta tra virgolette: <em>"Novecento in Italia"</em></li>
-    <li><em>Ital*</em> trova Italia, italiani, …</li>
-    <li>Almeno una parola: <em>Italia OR Austria</em></li>
-  </ul>
+  <div class="card">
+    <span class="tag">FI23</span>
+    <h3>Mangia Libri</h3>
+    <p>
+      Letture ad alta voce per i bambini dell'asilo.
+      Un'associazione che porta le storie dove vivono i bambini.
+    </p>
+    <a href="/pages/mangia-libri.html" class="btn btn-primary btn-sm">Scopri</a>
+  </div>
+
+  <div class="card">
+    <span class="tag">Grafica</span>
+    <h3>Design freelance</h3>
+    <p>
+      Identità visive, materiali di comunicazione, stampa e digitale.
+      Lavoro per realtà locali e associazioni.
+    </p>
+    <a href="/pages/portfolio.html" class="btn btn-primary btn-sm">Portfolio</a>
+  </div>
+
+  <div class="card">
+    <span class="tag">Progetti</span>
+    <h3>Progetti pubblici</h3>
+    <p>
+      Esperienze passate nella gestione di progetti a carattere pubblico
+      e comunitario.
+    </p>
+    <a href="/pages/progetti.html" class="btn btn-primary btn-sm">Vedi</a>
+  </div>
+
 </div>

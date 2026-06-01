@@ -1,13 +1,13 @@
-title: "Ufficio Digitale"
-description: "FI23 · Grafica · Progetti"
+title: "Ufficio di Gabriel Jones"
+description: "Mi piace fare tante cose!"
 baseurl: "/gob/"
-url: "https://gabrieljones.it/gob/"
+url: "https://gabrieljones.it"
 lang: it
 
 autore:
-  nome: "Il tuo nome"
+  nome: "Gabriel Jones"
   ruolo: "Animatore · Grafico · Progettista"
-  email: "tua@email.it"
+  email: "info@18f.it"
 
 nav_fi23:
   - { label: "Oratorio & Grest", url: "/pages/grest.html" }
