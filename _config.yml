@@ -1,23 +1,24 @@
-title: "Sistema bibliotecario della Società Filologica Friulana"
-description: "Catalogo di consultazione (OPAC)"
-baseurl: ""
-url: ""
+title: "Ufficio di Gabriel Jones"
+description: "Sito dell'ufficio di Gabriel Jones"
+baseurl: "/gob/"
+url: "https://gabrieljones.it"
 lang: it
 
 biblioteca:
-  nome: "Biblioteca della Società Filologica Friulana"
-  indirizzo: "Via Manin, 18 - 33100 Udine"
-  telefono: "0432-501598"
-  email: "biblioteca@filologicafriulana.it"
-  sito_web: "http://www.filologicafriulana.it"
+  nome: "Ufficio di Gabriel Jones"
+  indirizzo: "33170 Pordenone"
+  telefono: "0434-733808"
+  email: "info@18f.it"
+  sito_web: "http://www.gabrieljones.altervista.org"
 
 orari:
-  - { giorno: "lunedì",    orario: "9.00–12.30 e 14.30–18.00" }
-  - { giorno: "martedì",   orario: "9.00–12.30 e 14.30–18.00" }
-  - { giorno: "mercoledì", orario: "9.00–12.30 e 14.30–18.00" }
-  - { giorno: "giovedì",   orario: "9.00–12.30 e 14.30–18.00" }
-  - { giorno: "venerdì",   orario: "9.00–12.30 e 14.30–18.00" }
+  - { giorno: "lunedì",    orario: "Dalle 14.30 alle 18.00" }
+  - { giorno: "martedì",   orario: "Dalle 14.30 alle 18.00" }
+  - { giorno: "mercoledì", orario: "Dalle 14.30 alle 18.00" }
+  - { giorno: "giovedì",   orario: "Dalle 14.30 alle 18.00" }
+  - { giorno: "venerdì",   orario: "Dalle 14.30 alle 18.00" }
   - { giorno: "sabato",    orario: "chiuso" }
+  - { giorno: "Domenica",    orario: "chiuso" }
 
 nav_ricerche:
   - { label: "Semplice",  url: "/" }
